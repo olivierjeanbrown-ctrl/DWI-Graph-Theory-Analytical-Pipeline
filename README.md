@@ -1,4 +1,6 @@
-# A-CAP fMRI Graph-Theoretical Analysis Pipeline
+# DWI Graph-Theoretical Analysis Pipeline
+
+MOCK data generated for this public-access repository.
 
 Data processing and analysis pipeline for functional graph-theoretical metrics and optimal functioning in pediatric concussion.
 
@@ -22,8 +24,8 @@ Data processing and analysis pipeline for functional graph-theoretical metrics a
 
 ## Statistical Analysis (R)
 
-### Script 1: `of~funcgt_concussion_v02.R`
-Concussion-only analysis of metric × time associations
+### Script: `of~gt.R`
+Analysis of metric × time × group and metric × time associations
 
 **Model:** `optimal_functioning ~ metric_z × (time_c + time2_c) + age_z + sex + (1 | participant)`
 
@@ -34,14 +36,9 @@ Concussion-only analysis of metric × time associations
 4. Extract significant interactions
 5. Generate interpretations and plots
 
-**Output:** significant_interactions_concussion.csv, interpretations CSV, plots
-
-### Script 2: `of~funcgt_v02.R`
 Full-sample moderation analysis
 
 **Model:** `optimal_functioning ~ metric_z × grp × (time_c + time2_c) + age_z + sex + (1 | participant)`
-
-**Output:** significant_threeway_interactions.csv, moderation interpretations, faceted plots
 
 ## Methods
 
@@ -52,5 +49,5 @@ Full-sample moderation analysis
 
 ## Pipeline
 
-SQL (5 steps) → analysis_data.csv → Script 1 (2-way) + Script 2 (3-way)
+SQL (5 steps) → analysis_data.csv → Script 
 
